@@ -7,7 +7,13 @@ fi
 
 DEST=$1
 
-# TODO: verify that DEST is not a subdir of pwd
+DEST=$(readlink -f $DEST)
+MYPWD=$(readlink -f .)
+if [ "${DEST##$MYPWD}" != "$DEST" ] ; then
+	echo "destination cannot be a sub-directory of the current one"
+	exit 1
+fi
+
 mkdir -p $DEST
 
 for url in `sed '/^#/ d' sources.list` ; do
