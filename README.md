@@ -10,4 +10,9 @@ The references are stored in the `sources.list` file.
 The format of the file is one URL per line. Lines beginning with a hash character are comments.
 They are useful to remind the nature of the link.
 
-The `bash` script `cloneall.sh` uses the content of `sources.list` to clone all the repository within a target directory.
+The `bash` script `cloneall.sh` uses the content of `sources.list` to clone all the repositories within a target directory.
+To clone all the repositories run
+
+    ,/cloneall.sh <path>
+
+where `path` is the directory that will contain all the repositories. The destination path must be outside the current repository.
