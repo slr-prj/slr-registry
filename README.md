@@ -20,7 +20,7 @@ Comments are useful to remind the nature of the link.
 The `bash` script `cloneall.sh` uses the content of `sources.list` to clone all the repositories and store them within a target directory.
 To clone all the repositories run
 
-    ,/cloneall.sh <path>
+    ./cloneall.sh <path>
 
 where `path` is the directory that will contain all the repositories.
 The destination path must be outside the current repository.
